@@ -24,7 +24,7 @@ public class Motion {
 	
 	public Motion (String pName, String pEnemy, int pMovement, int pReproduction) {
 		
-		System.out.println("Creation of a Goldfish");
+		System.out.println("Creation of a " + pName);
 		nameAnimal = pName;
 		nameEnemy = pEnemy;
 		movement = pMovement;
@@ -33,7 +33,7 @@ public class Motion {
 	
 	public Motion (String fName, String fEnemy, int fMovement, int fReproduction, String fFood, int fSatiety, int fLife, int fBirth ) {
 		
-		System.out.println("Creation of a Predator");
+		System.out.println("Creation of a " + fName);
 		nameAnimal = fName;
 		nameEnemy = fEnemy;
 		movement = fMovement;
