@@ -5,7 +5,8 @@ public class Motion {
 	private String nameEnemy1;
 	private String nameEnemy2;
 	private String nameEnemy3;
-	private String nameFood;
+	private String nameFood1;
+	private String nameFood2;
 	private int satiety;
 	private int lifeExpectancy;
 	private int reproduction;
@@ -17,7 +18,7 @@ public class Motion {
 		System.out.println("Creation of a motion animal");
 		nameAnimal = "unknown";
 		nameEnemy1 = "unknown";
-		nameFood = "unknown";
+		nameFood1 = "unknown";
 		satiety = 0;
 		lifeExpectancy = 0;
 		reproduction = 0;
@@ -35,14 +36,15 @@ public class Motion {
 		reproduction = pReproduction;
 	    }
 	
-	public Motion (String fName, String fEnemy, int fMovement, int fReproduction, String fFood, int fSatiety, int fLife, int fBirth ) {
+	public Motion (String fName, String fEnemy, int fMovement, int fReproduction, String fFood1, String fFood2, int fSatiety, int fLife, int fBirth ) {
 		
 		System.out.println("Creation of a " + fName);
 		nameAnimal = fName;
 		nameEnemy1 = fEnemy;
 		movement = fMovement;
 		reproduction = fReproduction;
-		nameFood = fFood;
+		nameFood1 = fFood1;
+		nameFood2 = fFood2;
 		satiety = fSatiety;
 		lifeExpectancy = fLife;
 		birthDelay = fBirth;
