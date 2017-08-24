@@ -9,9 +9,25 @@ public class Motion {
 	private String nameFood2;
 	private int satiety;
 	private int lifeExpectancy;
-	private int reproduction;
+	private static int reproduction;
 	private int movement;
 	private int birthDelay;
+	private String pName;
+	private String pEnemy1;
+	private String pEnemy2;
+	private String pEnemy3;
+	private int pMovement;
+	private int pReproduction;
+	private String fName;
+	private String fEnemy;
+	private int fMovement;
+	private int fReproduction;
+	private String fFood1;
+	private String fFood2;
+	private int fSatiety;
+	private int fLife;
+	private int fBirth;
+	
 	
 	public Motion () {
 		
@@ -51,4 +67,12 @@ public class Motion {
 		
 	}
 
+	public void setFReproduction() {
+		Motion.reproduction = fReproduction;
+	}
+	
+	public int getFReproduction() {
+		return fReproduction;
+	}
+	
 }
