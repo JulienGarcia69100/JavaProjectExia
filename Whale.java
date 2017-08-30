@@ -1,38 +1,57 @@
-import java.awt.Graphics;
-import java.awt.Image;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.swing.JPanel;
 
+public class Whale {
+    private String specie;
+    private int food_level;
+    private int satiety;
+    private int life;
+    private int birth_delay;
+    
+    public Whale(String specie, int food_level, int satiety, int life, int birth_delay)
+    {
+        this.specie = specie;
+        this.food_level = food_level;
+        this.satiety = satiety;
+        this.life = life;
+        this.birth_delay = birth_delay;
+    }
+    
+    public String getSpecie() {
+            return specie;
+    }
 
-public class Whale extends Motion{
-	
-	private String Enemy;
-	private String Food;
-	private int LifeExpectancy;
+    public void setSpecie(String specie) {
+            this.specie = specie;
+    }
 
-	public Whale () {
-		System.out.println("Creation of a " + name + " , enemies: " + Enemy + " , Food : " + Food);
-		this.name = "Whale";
-		this.Enemy = "Shark";
-		this.Food = "JellyFish" + "GoldFish";
-		this.LifeExpectancy = 55;
-		this.satiety = 25;
-		this.birthDelay = 10;
-	}
-	
-	private int posX = -50;
-	private int posY = -50;
-	
-	public void paintComponentWhale(Graphics g){
-		try {
-		Image img = ImageIO.read(new File ("/Users/juliengarcia/eclipse-workspaceNew2/Test/src/image/baleine.png"));
-		   g.drawImage(img, posX, posY, 100, 70, null);
-	   } 
-	catch (IOException e) {
-		   e.printStackTrace();
-	}
-	}
+    public int getFood_level() {
+            return food_level;
+    }
 
+    public void setFood_level(int food_level) {
+            this.food_level = food_level;
+    }
+
+    public int getSatiety() {
+            return satiety;
+    }
+
+    public void setSatiety(int satiety) {
+            this.satiety = satiety;
+    }
+
+    public int getLife() {
+            return life;
+    }
+
+    public void setLife(int life) {
+            this.life = life;
+    }
+
+    public int getBirth_delay() {
+            return birth_delay;
+    }
+
+    public void setBirth_delay(int birth_delay) {
+            this.birth_delay = birth_delay;
+    }    
 }

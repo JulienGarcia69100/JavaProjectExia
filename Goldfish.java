@@ -1,20 +1,24 @@
 
-public class Shark {
+import javax.swing.ImageIcon;
+
+public class Goldfish {
     private String specie;
     private int food_level;
     private int satiety;
     private int life;
     private int birth_delay;
+    private ImageIcon img;
     
-    public Shark(String specie, int food_level, int satiety, int life, int birth_delay)
+    public Goldfish(String specie, int food_level, int satiety, int life, int birth_delay)
     {
         this.specie = specie;
         this.food_level = food_level;
         this.satiety = satiety;
         this.life = life;
         this.birth_delay = birth_delay;
+        
     }
-
+    
     public String getSpecie() {
             return specie;
     }
@@ -54,4 +58,5 @@ public class Shark {
     public void setBirth_delay(int birth_delay) {
             this.birth_delay = birth_delay;
     }
+    
 }

@@ -1,12 +1,13 @@
 
-public class Shark {
+
+public class Jellyfish {
     private String specie;
     private int food_level;
     private int satiety;
     private int life;
     private int birth_delay;
     
-    public Shark(String specie, int food_level, int satiety, int life, int birth_delay)
+    public Jellyfish(String specie, int food_level, int satiety, int life, int birth_delay)
     {
         this.specie = specie;
         this.food_level = food_level;
@@ -14,7 +15,7 @@ public class Shark {
         this.life = life;
         this.birth_delay = birth_delay;
     }
-
+    
     public String getSpecie() {
             return specie;
     }
