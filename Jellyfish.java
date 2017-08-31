@@ -1,27 +1,28 @@
 
+import javax.swing.ImageIcon;
 
-public class Jellyfish {
-    private String specie;
+public class Jellyfish extends Motion{
     private int food_level;
     private int satiety;
     private int life;
-    private int birth_delay;
+    private final int BIRTH_DELAY = 0;
+    private ImageIcon img;
     
-    public Jellyfish(String specie, int food_level, int satiety, int life, int birth_delay)
+    public Jellyfish()
     {
-        this.specie = specie;
-        this.food_level = food_level;
-        this.satiety = satiety;
-        this.life = life;
-        this.birth_delay = birth_delay;
+        super("Jellyfish");
+        this.food_level = 10;
+        this.satiety = 15;
+        this.life = 0;
+        img = new ImageIcon("meduse.png");
     }
     
     public String getSpecie() {
-            return specie;
+            return super.getName();
     }
 
     public void setSpecie(String specie) {
-            this.specie = specie;
+            super.setName(specie);
     }
 
     public int getFood_level() {
@@ -49,10 +50,11 @@ public class Jellyfish {
     }
 
     public int getBirth_delay() {
-            return birth_delay;
+            return BIRTH_DELAY;
     }
-
-    public void setBirth_delay(int birth_delay) {
-            this.birth_delay = birth_delay;
+    
+    public ImageIcon getImg()
+    {
+        return img;
     }
 }

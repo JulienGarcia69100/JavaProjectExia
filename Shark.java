@@ -1,26 +1,30 @@
 
-public class Shark {
-    private String specie;
+import javax.swing.ImageIcon;
+
+public class Shark extends Motion{
     private int food_level;
     private int satiety;
     private int life;
-    private int birth_delay;
+    private final int BIRTH_DELAY = 5;
+    private ImageIcon img;
+    private int direction;
     
-    public Shark(String specie, int food_level, int satiety, int life, int birth_delay)
+    public Shark()
     {
-        this.specie = specie;
-        this.food_level = food_level;
-        this.satiety = satiety;
-        this.life = life;
-        this.birth_delay = birth_delay;
+        super("Shark");
+        this.food_level = 10;
+        this.satiety = 15;
+        this.life = 0;
+        img = new ImageIcon("requinRL.png");
+        direction = 1;
     }
 
     public String getSpecie() {
-            return specie;
+            return super.getName();
     }
 
     public void setSpecie(String specie) {
-            this.specie = specie;
+            super.setName(specie);
     }
 
     public int getFood_level() {
@@ -48,10 +52,34 @@ public class Shark {
     }
 
     public int getBirth_delay() {
-            return birth_delay;
+            return BIRTH_DELAY;
     }
-
-    public void setBirth_delay(int birth_delay) {
-            this.birth_delay = birth_delay;
+    
+    public ImageIcon getImg()
+    {
+        return img;
+    }
+    
+    public void setImg(String url)
+    {
+        img = new ImageIcon(url);
+    }
+    
+    public void setDirection(int d)
+    {
+        direction = d;
+        if(d == -1)
+        {
+            setImg("requinLR.png");
+        }
+        else
+        {
+            setImg("requinRL.png");
+        }
+    }
+    
+    public int getDirection()
+    {
+        return direction;
     }
 }
