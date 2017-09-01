@@ -178,7 +178,7 @@ public class Simulation{
                 if(mode == 0)
                 {
                     mode = 1;
-                    goldFishesTimer.start();
+                    whaleTimer.start();
                     speciesPanel.setBackground(Color.lightGray);
                     speciesPanel.repaint();
                 }
@@ -194,7 +194,7 @@ public class Simulation{
                 if(mode == 1)
                 {
                     mode = 0;
-                    goldFishesTimer.stop();
+                    whaleTimer.stop();
                     speciesPanel.setBackground(Color.DARK_GRAY);
                     speciesPanel.repaint();
                 }
@@ -325,7 +325,6 @@ public class Simulation{
                     JLabel temp = jellyfisheslbl.get(i);
                     int x = temp.getX();
                     int y = temp.getY();
-                    boolean flag = true;
                     if(y < speciesPanel.getHeight())
                     {
                         y--;
@@ -347,7 +346,7 @@ public class Simulation{
         start.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                if(!whaleTimer.isRunning())
+                if(!whaleTimer.isRunning()&& mode == 1)
                 {
                     whaleTimer.start();
                 }
@@ -357,7 +356,7 @@ public class Simulation{
                     sharkTimer.start();
                 }
                 
-                if(!goldFishesTimer.isRunning() && mode == 1)
+                if(!goldFishesTimer.isRunning())
                 {
                     goldFishesTimer.start();
                 }

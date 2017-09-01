@@ -1,14 +1,17 @@
-
+//import
 import javax.swing.ImageIcon;
 
 
 public class Whale extends Motion{
+// attributs declaration
     private int food_level;
     private int satiety;
     private int life;
     private final int BIRTH_DELAY = 10;
     private ImageIcon img;
     private int direction;
+    
+//builder
     public Whale()
     {
         super("Whale");
@@ -19,6 +22,7 @@ public class Whale extends Motion{
         direction = 1;
     }
     
+//getters setters
     public String getSpecie() {
             return super.getName();
     }
