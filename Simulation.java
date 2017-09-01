@@ -14,7 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class Simulation{
+public class Simulation {
     // golbal variables for Program
     private JFrame frame;
     private JPanel speciesPanel;
@@ -35,23 +35,11 @@ public class Simulation{
     int x,y;
     
     // Constructor
-    public Simulation() {
-        // initialization of variables
-        random = new Random();
-        mode = 1;
-        round = 0;
-        initiate();
-        
-        //buliding elements on jpanel
-        buildWhales();
-        buildSharks();
-        buildGoldfishes();
-        buildJellyfishes();
-        
-    }
-    
     public void buildWhales()
     {
+    	
+    	 JFrame frame;
+    	 
         // adding whales to panel
         whales = new ArrayList();
         whaleslbl = new ArrayList();
@@ -155,6 +143,24 @@ public class Simulation{
             speciesPanel.repaint();
         }
     }
+
+
+
+    public Simulation () {
+        // initialization of variables
+        random = new Random();
+        mode = 1;
+        round = 0;
+        initiate();
+        
+        //buliding elements on jpanel
+        buildWhales();
+        buildSharks();
+        buildGoldfishes();
+        buildJellyfishes();
+        
+    }
+    
     
     // method to initiate GUI componenets
     public void initiate() {

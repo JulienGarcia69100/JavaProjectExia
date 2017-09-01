@@ -17,7 +17,7 @@ public class Whale extends Motion{
         super("Whale");
         this.food_level = 10;
         this.satiety = 25;
-        this.life = 0;
+        this.life = 55;
         img = new ImageIcon("baleineLR.png");
         direction = 1;
     }

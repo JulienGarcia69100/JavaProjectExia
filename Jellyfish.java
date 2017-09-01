@@ -1,22 +1,23 @@
-
+//import package
 import javax.swing.ImageIcon;
 
 public class Jellyfish extends Motion{
+	//attributs creation
     private int food_level;
     private int satiety;
     private int life;
     private final int BIRTH_DELAY = 0;
     private ImageIcon img;
-    
+   //builder 
     public Jellyfish()
     {
         super("Jellyfish");
         this.food_level = 10;
         this.satiety = 15;
-        this.life = 0;
+        this.life = 25;
         img = new ImageIcon("meduse.png");
     }
-    
+    //get and set name
     public String getSpecie() {
             return super.getName();
     }
@@ -24,11 +25,11 @@ public class Jellyfish extends Motion{
     public void setSpecie(String specie) {
             super.setName(specie);
     }
-
+    //get and set food level
     public int getFood_level() {
             return food_level;
     }
-
+    //getter setter
     public void setFood_level(int food_level) {
             this.food_level = food_level;
     }

@@ -1,24 +1,25 @@
-
+//import
 import javax.swing.ImageIcon;
 
 public class Shark extends Motion{
+//attributs declaration
     private int food_level;
     private int satiety;
     private int life;
-    private final int BIRTH_DELAY = 5;
+    private final int birthDelay = 5;
     private ImageIcon img;
     private int direction;
-    
+//builder    
     public Shark()
     {
         super("Shark");
         this.food_level = 10;
         this.satiety = 15;
-        this.life = 0;
+        this.life = 35;
         img = new ImageIcon("requinRL.png");
         direction = 1;
     }
-
+//getters setters
     public String getSpecie() {
             return super.getName();
     }
@@ -51,8 +52,8 @@ public class Shark extends Motion{
             this.life = life;
     }
 
-    public int getBirth_delay() {
-            return BIRTH_DELAY;
+    public int getbirthDelay() {
+            return birthDelay;
     }
     
     public ImageIcon getImg()
